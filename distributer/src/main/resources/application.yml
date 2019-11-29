@@ -2,3 +2,6 @@ spring:
   rsocket:
     server:
       port: 8080
+
+snowflake:
+  node-id: 0
