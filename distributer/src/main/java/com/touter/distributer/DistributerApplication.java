@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DistributerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(DistributerApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(DistributerApplication.class, args);
+  }
 }

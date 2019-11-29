@@ -29,8 +29,12 @@ public class DefaultSnowflakeIdImpl implements SnowflakeId {
    */
   @Override
   public long toLong() {
-    return this.timestamp << (SnowflakeIdConfiguration.TOTAL_BITS - SnowflakeIdConfiguration.EPOCH_BITS)
-        | this.nodeId << (SnowflakeIdConfiguration.TOTAL_BITS - SnowflakeIdConfiguration.EPOCH_BITS - SnowflakeIdConfiguration.NODE_ID_BITS)
+    return this.timestamp
+            << (SnowflakeIdConfiguration.TOTAL_BITS - SnowflakeIdConfiguration.EPOCH_BITS)
+        | this.nodeId
+            << (SnowflakeIdConfiguration.TOTAL_BITS
+                - SnowflakeIdConfiguration.EPOCH_BITS
+                - SnowflakeIdConfiguration.NODE_ID_BITS)
         | this.sequenceId;
   }
 }

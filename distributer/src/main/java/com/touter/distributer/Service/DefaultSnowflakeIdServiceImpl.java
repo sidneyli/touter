@@ -27,6 +27,6 @@ public class DefaultSnowflakeIdServiceImpl implements SnowflakeIdService {
    */
   @Override
   public Mono<Long> nextId() {
-    return Mono.just(this.snowflakeIdGenerator.nextId()).subscribeOn(Schedulers.single());
+    return Mono.just(this.snowflakeIdGenerator.nextId()).subscribeOn(Schedulers.parallel());
   }
 }

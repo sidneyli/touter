@@ -5,7 +5,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import reactor.core.publisher.Mono;
 
-/** Represents the rsocket controller to get a distributed id. */
+/** Represents the RSocket controller to get a distributed id. */
 @Controller
 public class SnowflakeIdController {
 
@@ -23,7 +23,7 @@ public class SnowflakeIdController {
   /**
    * Retrieves the next snowflake id.
    *
-   * @return Snowflake id.
+   * @return Generated snowflake id.
    */
   @MessageMapping("getNextId")
   public Mono<Long> getNextId() {
